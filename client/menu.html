@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DM Арена</title>
+    <link rel="stylesheet" href="menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="mainMenu" class="menu-container" style="display: none;">
+        <h1>DM Арена <span id="closeMain" class="close-btn">✖</span></h1>
+        <div id="lobbyList" class="lobby-list"></div>
+        <button id="createLobbyBtn" class="menu-button">Создать лобби</button>
+    </div>
+
+    <div id="createLobbyMenu" class="menu-container" style="display: none;">
+        <h1>Создание лобби <span id="closeCreate" class="close-btn">✖</span></h1>
+        <div class="form-group">
+            <label for="weaponSelect">Оружие:</label>
+            <select id="weaponSelect" class="form-control"></select>
+        </div>
+        <div class="form-group">
+            <label for="durationSelect">Длительность (мин):</label>
+            <select id="durationSelect" class="form-control">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+            </select>
+        </div>
+        <button id="confirmCreateLobby" class="menu-button">Создать</button>
+        <button id="backToMain" class="menu-button secondary">Назад</button>
+    </div>
+
+    <div id="lobbyMenu" class="menu-container" style="display: none;">
+        <h1>Лобби <span id="closeLobby" class="close-btn">✖</span></h1>
+        <div id="lobbyInfo" class="lobby-info"></div>
+        <button id="startGameBtn" class="menu-button" style="display: none;">Начать игру</button>
+        <button id="leaveLobbyBtn" class="menu-button secondary">Покинуть</button>
+    </div>
+
+    <script src="menu.js"></script>
+</body>
+</html>
